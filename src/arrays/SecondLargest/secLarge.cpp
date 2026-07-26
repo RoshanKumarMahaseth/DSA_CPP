@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(){
-    int arr[6]={1,5,3,7,0,6};
+    int arr[6]={1,1,1,1,1,1};
     int size = sizeof(arr)/sizeof(arr[0]);
 
     // LARGET NUMBER
@@ -31,12 +31,14 @@ int main(){
         }
     }
 
+    if(second==INT_MIN){        //if there is no second large than it return nothing (-1)
+        return -1;
+    }
+
     cout<<"Second Largest Number is: "<<second<<endl;
 
     return 0;
 }
-
-
 
 
 //with function
@@ -45,7 +47,7 @@ int main(){
 #include <climits>
 using namespace std;
 
-void SecLar(int arr[],int size){
+int SecLar(int arr[],int size){
 
     //Largest number
     int ans = INT_MIN;
@@ -67,7 +69,7 @@ void SecLar(int arr[],int size){
         }
     }
     cout<<"Second largest number is: "<<second<<endl;
-    
+
 }
 int main(){
     int arr[6]={1,4,2,6,8,9};
