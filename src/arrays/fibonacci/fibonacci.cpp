@@ -28,3 +28,25 @@ int main(){
 
 //printing user demanded position fibonacci number
 
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"enter the position: ";
+    cin>>n;
+
+    int arr[10000];
+    int size=100;
+
+    //declaring first two digit
+
+    arr[0]=0;
+    arr[1]=1;
+
+    for(int i=2;i<size;i++){
+        arr[i]=arr[i-1]+arr[i-2];
+    }
+
+    cout<<arr[n]<<endl;
+}
