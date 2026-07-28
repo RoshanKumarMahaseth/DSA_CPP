@@ -1,4 +1,4 @@
-//Sorting an array in asscending form by Insertion method...
+//Sorting an array in asscending form by Selection method...
 
 #include <iostream>
 using namespace std;
@@ -22,7 +22,7 @@ int main(){
         swap(arr[i],arr[index]);
     }
 
-    
+
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
