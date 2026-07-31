@@ -112,3 +112,56 @@ int main(){
 
     return 0;
 }
+
+
+//printing repetitive number in an array
+
+
+//brute force by Linear search
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arr[]={2,4,4,5,6};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    int target=4;
+    int count=0;
+
+    for(int i=0;i<size;i++){
+        if(arr[i]==target){
+            count++;
+        }
+    }
+
+    cout<<"number of time target is reapetated: "<<count<<endl;
+    return 0;
+}
+
+
+
+//solving by binary search
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={2,4,4,4,5,6};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     int target=4;
+//     int count=0;
+//     int st=0,end=size-1,mid;
+
+//     while(st<=end){
+//         mid = st+(end-st)/2;
+
+//         if(arr[mid]==target){
+//             count++;
+//         }else if(arr[mid]<target){
+//             st+mid+1;
+//         }else{
+//             end = mid-1;
+//         }
+//     }
+
+//     cout<<"xxx: "<<count<<endl;
+// }
