@@ -49,8 +49,8 @@ using namespace std;
 int BinarySearch(int arr[],int n,int target){
     int st=0,end=n-1,mid;
 
-    while(st<end){
-        mid = (st+end)/2;
+    while(st<=end){
+        mid = st+(end-st)/2;
 
         if(arr[mid]==target){
             return mid;
