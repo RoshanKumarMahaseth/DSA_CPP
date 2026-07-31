@@ -81,3 +81,34 @@ int main(){
     return 0;
 
 }
+
+
+//finding square root in an array
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arr[]={1,2,3,4,5,6,7,8,9,10};
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    int st=1,end=size,index,mid,sqrt=80;
+
+    while(st<=end){
+        mid = st+(end-st)/2;
+
+        if(mid*mid==sqrt){
+            index = mid;
+            break;
+        }
+        else if(mid*mid<sqrt){
+            index = mid;
+            st=mid+1;
+        }else{
+            end = mid-1;
+        }
+    }
+
+    cout<<"the sqrt position is: "<<index<<endl;
+
+    return 0;
+}
