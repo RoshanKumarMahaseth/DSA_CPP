@@ -141,27 +141,35 @@ int main(){
 
 
 
-//solving by binary search
-// #include <iostream>
-// using namespace std;
-// int main(){
-//     int arr[]={2,4,4,4,5,6};
-//     int size = sizeof(arr)/sizeof(arr[0]);
-//     int target=4;
-//     int count=0;
-//     int st=0,end=size-1,mid;
 
-//     while(st<=end){
-//         mid = st+(end-st)/2;
 
-//         if(arr[mid]==target){
-//             count++;
-//         }else if(arr[mid]<target){
-//             st+mid+1;
-//         }else{
-//             end = mid-1;
-//         }
-//     }
 
-//     cout<<"xxx: "<<count<<endl;
-// }
+//returning index value of largest number in an mountain array;
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arr[]={2,5,6,8,9,6,5};
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    int st=0,end=size-1,mid,index;
+
+    while(st<=end){
+        // mid = st+(end-st)/2;
+        mid = end+(st-end)/2;
+
+        if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]){
+            index = mid;
+            break;
+        }
+        else if(arr[mid]>arr[mid-1] && arr[mid]<arr[mid+1]){
+            st = mid+1;
+        }else{
+            end=mid-1;
+        }
+
+    }
+
+    cout<<"largest value is: "<<index<<endl;
+    return 0;
+}
