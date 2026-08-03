@@ -247,3 +247,37 @@ int main(){
 }
 
 
+
+
+ //kth missing positive number in an array
+
+ #include <iostream>
+ using namespace std;
+
+ int main(){
+    int arr[]={2,3,4,7,11,12};
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    int st=0,end=size-1,mid,ans,k=5;
+
+    while(st<=end){
+        mid = st+(end-st)/2;
+
+        if(arr[mid]-mid-1>=k){
+            ans = mid;
+            end = mid-1;
+        }else{
+            st = mid+1;
+        }
+    }
+
+    int miss = k+ans;
+
+    cout<<"the Kth missing number is: "<<miss<<endl;
+
+    return 0;
+ }
+
+
+
+
