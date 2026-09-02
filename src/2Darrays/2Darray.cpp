@@ -118,32 +118,60 @@
 //print sum of Diagonal Element
 
 
+// #include <iostream>
+// using namespace std;
+
+// void printSumDiag(int arr[][3],int row,int col){
+//     int first=0,sec=0;
+
+//     //first Diagonal sum
+//     int i=0;
+//     while(i<row){
+//         first+=arr[i][i];
+//         i++;
+//     }
+
+//     //second Diagonal 
+//     i=0;
+//     int j=col-1;
+//     while(j>=0){
+//         sec+=arr[i][j];
+//         i++,j--;
+//     }
+
+//     cout<<first<<" "<<sec<<" ";
+// }
+// int main(){
+//     int arr[3][3]={1,2,3,4,5,6,7,8,9};
+
+//     printSumDiag(arr,3,3);
+
+// }
+
+
 #include <iostream>
 using namespace std;
+void ReverseRow(int arr[][4],int row,int col){
 
-void printSumDiag(int arr[][3],int row,int col){
-    int first=0,sec=0;
+    for(int i=0;i<row;i++){
+        int st=0,end=col-1;
+        while(st<=end){
+            swap(arr[i][st],arr[i][end]);
+            st++,end--;
 
-    //first Diagonal sum
-    int i=0;
-    while(i<row){
-        first+=arr[i][i];
-        i++;
+        }
     }
-
-    //second Diagonal 
-    i=0;
-    int j=col-1;
-    while(j>=0){
-        sec+=arr[i][j];
-        i++,j--;
+    for(int row=0;row<3;row++){
+        for(int col=0;col<4;col++){
+            cout<<arr[row][col]<<" ";
+        }
     }
-
-    cout<<first<<" "<<sec<<" ";
+    
 }
 int main(){
-    int arr[3][3]={1,2,3,4,5,6,7,8,9};
+    int arr[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
+    ReverseRow(arr,3,4);
 
-    printSumDiag(arr,3,3);
+    return 0;
 
 }
