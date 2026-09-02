@@ -19,7 +19,26 @@ int main(){
             cout<<arr[row][col]<<" ";
         }
     }
+
+    cout<<endl; 
+
     printcol(arr,3,4);
 
+    cout<<endl;
+
+    //Find an element is present or not
+ 
+    int x = 61;
+
+    for(int row=0;row<3;row++){
+        for(int col=0;col<4;col++){
+            if(arr[row][col]==x){
+                cout<<"Yes";
+                return 0;
+            }
+        }
+    }
+
+    cout<<"no";
     return 0;
 }
