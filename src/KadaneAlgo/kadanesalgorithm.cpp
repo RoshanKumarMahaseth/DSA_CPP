@@ -37,7 +37,7 @@
 
 //     suffix[n-1] = arr[n-1];
 //     for(int i=n-2;i>=0;i--){
-//         suffix[i]=suffix[i-2]+arr[i-1];
+//         suffix[i]=arr[i]+suffix[i+1];
 //     }
 
 //     for(int i=0;i<suffix.size();i++){
@@ -55,7 +55,7 @@
 #include <algorithm>
 using namespace std;
 
-bool divide(vector<int>arr){
+int divide(vector<int>arr){
     int prefix=0,total_sum=0,n=arr.size();
     //total sum
 
