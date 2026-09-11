@@ -336,3 +336,79 @@
 
 
 //kadane's algorithm
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+
+// using namespace std;
+
+// int Subbarrays(vector<int> arr){
+//     int prefix=0,total_sum=0,size=arr.size();
+
+//     //total sum
+//     for(int i=0;i<size;i++){
+//         total_sum += arr[i];
+//     }
+
+//     for(int i=0;i<size;i++){
+//         prefix += arr[i];
+
+//         if(total_sum==2*prefix){
+//             return 1;
+//         }
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int size;
+//     cout<<"array size: ";
+//     cin>>size;
+//     vector<int>arr(size);
+//     cout<<"enter array: ";
+//     for(int i=0;i<size;i++){
+//         cin>>arr[i];
+//     }
+
+//     cout<<Subbarrays(arr);
+
+
+// }
+
+
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int trap(vector<int>arr){
+    int size = arr.size();
+    int ans = 0;
+    int l=0,r=size-1;
+    int lmax=0,rmax=0;
+
+    while(l<r){
+        lmax = max(lmax,arr[l]);
+        rmax = max(rmax,arr[r]);
+
+        if(lmax<rmax){
+            ans += lmax-arr[l];
+            l++;
+        }
+        else{
+            ans += rmax-arr[r];
+            r--;
+        }
+
+    }
+    return ans;
+}
+int main(){
+    vector<int>arr = {0,1,0,2,1,0,1,3,2,1,2};
+
+    cout<<trap(arr)<<endl;
+
+}
