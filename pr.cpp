@@ -379,36 +379,78 @@
 
 
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
 
-int trap(vector<int>arr){
-    int size = arr.size();
-    int ans = 0;
-    int l=0,r=size-1;
-    int lmax=0,rmax=0;
+// int trap(vector<int>arr){
+//     int size = arr.size();
+//     int ans = 0;
+//     int l=0,r=size-1;
+//     int lmax=0,rmax=0;
 
-    while(l<r){
-        lmax = max(lmax,arr[l]);
-        rmax = max(rmax,arr[r]);
+//     while(l<r){
+//         lmax = max(lmax,arr[l]);
+//         rmax = max(rmax,arr[r]);
 
-        if(lmax<rmax){
-            ans += lmax-arr[l];
-            l++;
-        }
-        else{
-            ans += rmax-arr[r];
-            r--;
-        }
+//         if(lmax<rmax){
+//             ans += lmax-arr[l];
+//             l++;
+//         }
+//         else{
+//             ans += rmax-arr[r];
+//             r--;
+//         }
 
-    }
-    return ans;
-}
-int main(){
-    vector<int>arr = {0,1,0,2,1,0,1,3,2,1,2};
+//     }
+//     return ans;
+// }
+// int main(){
+//     vector<int>arr = {0,1,0,2,1,0,1,3,2,1,2};
 
-    cout<<trap(arr)<<endl;
+//     cout<<trap(arr)<<endl;
 
-}
+// }
+
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int trap(vector<int>arr){
+//     int size = arr.size();
+//     int lmax=0,rmax=0,ans=0;
+//     int l=0,r=size-1;
+
+//     while(l<r){
+//         lmax = max(lmax,arr[l]);
+//         rmax = max(rmax,arr[r]);
+
+//         if(lmax<rmax){
+//             ans += lmax-arr[l];
+//             l++;
+//         }else{
+//             ans += rmax-arr[r];
+//             r--;
+//         }
+//     }
+
+//     return ans;
+// }
+// int main(){
+//     int size;
+//     cout<<"Size: ";
+//     cin>>size;
+//     vector<int>arr(size);
+//     cout<<"enter array: ";
+//     for(int i=0;i<size;i++){
+//         cin>>arr[i];
+//     }
+
+//     cout<<trap(arr)<<endl;
+
+// }
+
+
