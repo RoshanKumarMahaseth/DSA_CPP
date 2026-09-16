@@ -149,29 +149,36 @@
 // }
 
 
-#include <iostream>
-using namespace std;
-void ReverseRow(int arr[][4],int row,int col){
+// #include <iostream>
+// using namespace std;
+// void ReverseRow(int arr[][4],int row,int col){
 
-    for(int i=0;i<row;i++){
-        int st=0,end=col-1;
-        while(st<=end){
-            swap(arr[i][st],arr[i][end]);
-            st++,end--;
+//     for(int i=0;i<row;i++){
+//         int st=0,end=col-1;
+//         while(st<=end){
+//             swap(arr[i][st],arr[i][end]);
+//             st++,end--;
 
-        }
-    }
-    for(int row=0;row<3;row++){
-        for(int col=0;col<4;col++){
-            cout<<arr[row][col]<<" ";
-        }
-    }
+//         }
+//     }
+//     for(int row=0;row<3;row++){
+//         for(int col=0;col<4;col++){
+//             cout<<arr[row][col]<<" ";
+//         }
+//     }
     
-}
-int main(){
-    int arr[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
-    ReverseRow(arr,3,4);
+// }
+// int main(){
+//     int arr[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
+//     ReverseRow(arr,3,4);
 
-    return 0;
+//     return 0;
 
-}
+// }
+
+
+
+
+//column major order
+
+

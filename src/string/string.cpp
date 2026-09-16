@@ -36,3 +36,13 @@
 
 //     return 0;
 // }
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string s = "roshan";
+    cout<<s<<endl;
+
+    return 0;
+}
