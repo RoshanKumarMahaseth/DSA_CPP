@@ -125,29 +125,47 @@
 // }
 
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     string s = "roshan";
+//     int size=0;
+//     while(s[size]!='\0'){
+//         size++;
+//     }
+
+//     cout<<size<<endl;
+
+//     string s2 = "namam";
+//     int st=0,end=s2.size()-1;
+
+//     while(st<end){
+//         if(s2[st]!=s2[end]){
+//             cout<<"not a palidrome";
+//             return 0;
+//         }
+//         st++,end--;
+//     }
+//     cout<<"its a palidrome";
+    
+    
+// }
+
+
 #include <iostream>
 using namespace std;
 
 int main(){
-    string s = "roshan";
-    int size=0;
-    while(s[size]!='\0'){
-        size++;
-    }
-
-    cout<<size<<endl;
-
-    string s2 = "namam";
-    int st=0,end=s2.size()-1;
-
-    while(st<end){
-        if(s2[st]!=s2[end]){
-            cout<<"not a palidrome";
-            return 0;
+    string s = "hyy its me roshan";
+    // int size = sizeof()
+    int count = 0;
+    int st=0,end=s.size();
+    for(int i=s.size()-1;i>=0;i--){
+        if(s[i] != ' '){
+            count++;
         }
-        st++,end--;
     }
-    cout<<"its a palidrome";
-    
-    
+    cout<<count<<endl;
 }
+
