@@ -492,26 +492,51 @@
 // }
 
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
 
-int main(){
-    vector<int> nums = {2,2,1,1,1,2,2};
+// int main(){
+//     vector<int> nums = {2,2,1,1,1,2,2};
 
-    for(int i=0;i<nums.size();i++){
-        for(int j=0;j<nums.size()-i-1;j++){
-            if(nums[j]>nums[j+1]){
-                swap(nums[j],nums[j+1]);
-            }
+//     for(int i=0;i<nums.size();i++){
+//         for(int j=0;j<nums.size()-i-1;j++){
+//             if(nums[j]>nums[j+1]){
+//                 swap(nums[j],nums[j+1]);
+//             }
            
-        }
-    }
+//         }
+//     }
 
-    for(int i=0;i<nums.size();i++){
-        cout<<nums[i]<<" ";
-    }
+//     for(int i=0;i<nums.size();i++){
+//         cout<<nums[i]<<" ";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+//     1
+// #include <iostream>
+// #include <vector>
+// #include <climits>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+//     vector<int> arr = {2,4,23,5,6,7,1,3};
+//     int size = arr.size();
+//     int min = INT_MAX;
+
+//     for(int i=0;i<size;i++){
+//         if(arr[i]<min){
+//             min = arr[i];
+//         }
+//     }
+
+//     cout<<"the minimum value in an array is: "<<min<<endl;
+
+//     return 0;
+    
+// }
