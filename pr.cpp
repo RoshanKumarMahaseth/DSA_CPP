@@ -581,29 +581,62 @@
 // }
 
 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// void Swap(vector<int> arr,int size){
+//     int st=0,end=size-1;
+
+//     while(st<=end){
+//         swap(arr[st],arr[end]);
+//         st++,end--;
+//     }
+
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+// int main(){
+//     vector<int> arr={1,2,3,4,5,6,7,8};
+//     int size = arr.size();
+
+//     Swap(arr,size);
+
+//     return 0;
+// }
+
+
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-void Swap(vector<int> arr,int size){
+void ShiftZero(vector<int> arr,int size){
     int st=0,end=size-1;
 
     while(st<=end){
-        swap(arr[st],arr[end]);
-        st++,end--;
+        if(arr[st]==0){
+            swap(arr[st],arr[end]);
+            st++,end--;
+        }else{
+            st++;
+        }
     }
 
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
-    cout<<endl;
+
+
 }
 int main(){
-    vector<int> arr={1,2,3,4,5,6,7,8};
+    vector<int> arr = {0,1,0,3,12};
     int size = arr.size();
 
-    Swap(arr,size);
-
+    ShiftZero(arr,size);
     return 0;
 }
