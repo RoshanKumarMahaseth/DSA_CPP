@@ -542,40 +542,68 @@
 // }
 
 
+// #include <iostream>
+// #include <climits>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// void secondLargest(vector<int>arr,int size){
+    
+//     //first largest
+//     int first = INT_MIN;
+//     for(int i=0;i<size;i++){
+//         if(arr[i]>first){
+//             first = arr[i];
+//         }
+//     }
+//     //second
+//     int second = INT_MIN;
+
+//     for(int i=0;i<size;i++){
+//         if(arr[i]>second){
+//             if(arr[i]==first){
+//                 break;
+//             }else{
+//                 second = arr[i];
+//             }
+//         }
+//     }
+//     cout<<"second largest number is: "<<second<<endl;
+
+// }
+// int main(){
+//     vector<int> arr = {1,2,3,4,5,6,7,8};
+//     int size = arr.size();
+
+//     secondLargest(arr,size);
+//     return 0;
+// }
+
+
 #include <iostream>
-#include <climits>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-void secondLargest(vector<int>arr,int size){
-    
-    //first largest
-    int first = INT_MIN;
-    for(int i=0;i<size;i++){
-        if(arr[i]>first){
-            first = arr[i];
-        }
+void Swap(vector<int> arr,int size){
+    int st=0,end=size-1;
+
+    while(st<=end){
+        swap(arr[st],arr[end]);
+        st++,end--;
     }
-    //second
-    int second = INT_MIN;
 
     for(int i=0;i<size;i++){
-        if(arr[i]>second){
-            if(arr[i]==first){
-                break;
-            }else{
-                second = arr[i];
-            }
-        }
+        cout<<arr[i]<<" ";
     }
-    cout<<"second largest number is: "<<second<<endl;
-
+    cout<<endl;
 }
 int main(){
-    vector<int> arr = {1,2,3,4,5,6,7,8};
+    vector<int> arr={1,2,3,4,5,6,7,8};
     int size = arr.size();
 
-    secondLargest(arr,size);
+    Swap(arr,size);
+
     return 0;
 }
