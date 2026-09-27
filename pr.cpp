@@ -610,33 +610,63 @@
 
 
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
 
-void ShiftZero(vector<int> arr,int size){
-    int st=0,end=size-1;
+// void ShiftZero(vector<int> arr,int size){
+//     int st=0,end=size-1;
 
-    while(st<=end){
-        if(arr[st]==0){
-            swap(arr[st],arr[end]);
-            st++,end--;
-        }else{
-            st++;
-        }
-    }
+//     while(st<=end){
+//         if(arr[st]==0){
+//             swap(arr[st],arr[end]);
+//             st++,end--;
+//         }else{
+//             st++;
+//         }
+//     }
 
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
-    }
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i]<<" ";
+//     }
 
 
-}
-int main(){
-    vector<int> arr = {0,1,0,3,12};
-    int size = arr.size();
+// }
+// int main(){
+//     vector<int> arr = {0,1,0,3,12};
+//     int size = arr.size();
 
-    ShiftZero(arr,size);
-    return 0;
-}
+//     ShiftZero(arr,size);
+//     return 0;
+// }
+
+
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int MissNumber(vector<int> arr,int size){
+
+//     int total=0;
+//     for(int i=0;i<size;i++){
+//         total+=arr[i];
+//     }
+
+//     int actual_size = size*(size+1)/2;
+
+//     int miss = actual_size-total;
+
+//     return miss;
+// }
+// int main(){
+//     vector<int>arr = {9,6,4,2,3,5,7,0,1};
+//     int size = arr.size();
+
+//     cout<<MissNumber(arr,size)<<endl;
+
+//     return 0;
+// }
+
