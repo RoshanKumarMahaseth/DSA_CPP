@@ -670,3 +670,50 @@
 //     return 0;
 // }
 
+
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+//     vector<int>arr = {0,0,1,1,1,2,2,3,3,4};
+//     int size = arr.size();
+//     int count = 1;
+
+//     for(int i=0;i<size-1;i++){
+//         if(arr[i]!=arr[i+1]){
+//             count++;
+//         }
+//     }
+
+//     cout<<"total: "<<count<<endl;
+
+//     return 0;
+// }
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void twoSum(vector<int> arr,int size,int target){
+    for(int i=0;i<size;i++){
+        for(int j=i+1;j<size;j++){
+            if(arr[i]+arr[j]==target){
+                cout<<i<<","<<j<<endl;
+            }
+        }
+    }
+
+}
+int main(){
+    vector<int> arr = {1,2,3,4,5,0,8};
+    int size = arr.size();
+    int target = 12;
+
+    twoSum(arr,size,target);
+    return 0;
+}
