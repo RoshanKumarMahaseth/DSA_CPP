@@ -80,19 +80,42 @@
 // }
 
 
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     string str = "programming";
+//     int count = 0;
+//     for(int i=0;i<str.size();i++){
+//         if(str[i]=='g'){
+//             count++;
+//         }
+//     }
+
+//     cout<<count<<endl;
+//     return 0;
+// }
+
+
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(){
+
     string str = "programming";
     int count = 0;
     for(int i=0;i<str.size();i++){
-        if(str[i]=='g'){
+        if(str[i]=='a' || str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
             count++;
         }
     }
+    int number = str.size()-count;
 
-    cout<<count<<endl;
+    cout<<"number of vowels: "<<count<<endl;
+    cout<<"number of constant: "<<number<<endl;
+
     return 0;
 }
+
