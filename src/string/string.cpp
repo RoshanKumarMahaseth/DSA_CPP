@@ -161,21 +161,52 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     string str = "apple";
+//     int freq[26]={0};
+
+//     for(int i=0;i<str.size();i++){
+//         freq[str[i]-'a']++;
+//     }
+
+//     for(int i=0;i<26;i++){
+//         if(freq[i]>0){
+//             cout<<char(i+'a')<<"="<<freq[i]<<endl;
+//         }
+//     }
+
+//     return 0;
+
+// }
+
+
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(){
-    string name = "programming";
+    string str = "hello";
     int freq[26]={0};
-    for(int i=0;i<name.size();i++){
-        freq[name[i]-'a']++;
+    for(int i=0;i<str.size();i++){
+        freq[str[i]-'a']++;
     }
+    
+    int maxfreq = 0;
+    int maxIndex = 0;
+
     for(int i=0;i<26;i++){
-        if(freq[i]>0){
-            cout<<char(i+'a')<<"="<<freq[i]<<endl;
+        if(freq[i]>maxfreq){
+            maxfreq = freq[i];
+            maxIndex = i;
         }
     }
+
+    cout<<"most frequent character: "<<char(maxIndex+'a')<<endl;
+    cout<<"frequency: "<<maxfreq<<endl;
 
     return 0;
 }
