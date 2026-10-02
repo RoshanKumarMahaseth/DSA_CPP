@@ -98,24 +98,84 @@
 // }
 
 
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+
+//     string str = "programming";
+//     int count = 0;
+//     for(int i=0;i<str.size();i++){
+//         if(str[i]=='a' || str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
+//             count++;
+//         }
+//     }
+//     int number = str.size()-count;
+
+//     cout<<"number of vowels: "<<count<<endl;
+//     cout<<"number of constant: "<<number<<endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     string str = "programming";
+//     int st=0,end=str.size()-1;
+//     while(st<=end){
+//         swap(str[st],str[end]);
+//         st++;
+//         end--;
+//     }
+
+//     cout<<str<<endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     string name = "madam";
+//     int st=0,end=name.size()-1;
+
+//     while(st<end){
+//         if(name[st]==name[end]){
+//             st++;
+//             end--;
+//         }else{
+//             cout<<"not palidrome";
+//             return 0;
+//         }
+//     }
+//     cout<<"its palidrome"<<endl;
+
+//     return 0;
+// }
+
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(){
-
-    string str = "programming";
-    int count = 0;
-    for(int i=0;i<str.size();i++){
-        if(str[i]=='a' || str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
-            count++;
+    string name = "programming";
+    int freq[26]={0};
+    for(int i=0;i<name.size();i++){
+        freq[name[i]-'a']++;
+    }
+    for(int i=0;i<26;i++){
+        if(freq[i]>0){
+            cout<<char(i+'a')<<"="<<freq[i]<<endl;
         }
     }
-    int number = str.size()-count;
-
-    cout<<"number of vowels: "<<count<<endl;
-    cout<<"number of constant: "<<number<<endl;
 
     return 0;
 }
-
