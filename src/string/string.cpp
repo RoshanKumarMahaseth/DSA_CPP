@@ -22,32 +22,59 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main(){
-    string name = "Roshan";
-    // cout<<"enter your love name: ";
-    // cin>>name;
+// int main(){
+//     string name = "Roshan";
+//     // cout<<"enter your love name: ";
+//     // cin>>name;
 
-    // cout<<"your love name is: "<<name<<endl;
+//     // cout<<"your love name is: "<<name<<endl;
 
-    // string sentence;
-    // getline(cin,sentence);
-    // cout<<sentence;
+//     // string sentence;
+//     // getline(cin,sentence);
+//     // cout<<sentence;
 
 
-    //finding string length
-    cout<<name.length()<<endl;
+//     //finding string length
+//     cout<<name.length()<<endl;
 
-    cout<<name.size();
+//     cout<<name.size();
 
-    //modifying characters;
+//     //modifying characters;
 
-    name[0]='M';
-    cout<<name<<endl;
+//     name[0]='M';
+//     cout<<name<<endl;
     
 
-    return 0;
+//     return 0;
     
-}
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     string str = "Himanshi";
+//     for(int i=0;i<str.size();i++){
+//         cout<<str[i]<<endl;
+//     }
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     string name = "Himanshi";
+//     int count = 0;
+//     for(int i=0;i<name.size();i++){
+//         if(name[i]=='a' || name[i]=='e'||name[i]=='i'||name[i]=='o'||name[i]=='u'){
+//             count++;
+//         }
+//     }
+
+//     cout<<count<<endl;
+// }
