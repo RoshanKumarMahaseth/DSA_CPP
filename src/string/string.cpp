@@ -232,22 +232,56 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     string str = "I love coding";
+//     int count = 1;
+
+//     for(int i=0;i<str.size();i++){
+//         if(str[i]==' '){
+//             count++;
+//         }
+//     }
+
+//     cout<<count<<endl;
+//     return 0;
+
+
+// }
+
+
+
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(){
-    string str = "I love coding";
-    int count = 1;
-
+    string str = "I love programming";
+    
+    int count = 0;
+    int result = 0;
+    
     for(int i=0;i<str.size();i++){
-        if(str[i]==' '){
+        if(str[i]!=' '){
             count++;
+        }else{
+            if(count>result){
+                result += count;
+            }
+            count=0;
         }
+       
     }
 
-    cout<<count<<endl;
+    if(count>result){
+        result = count;
+    }
+    cout<<result<<endl;
+
+    
+
     return 0;
-
-
 }

@@ -1,5 +1,19 @@
-string name;
-    // cout<<"enter your love name: ";
-    // cin>>name;
+#include <iostream>
+// #include <string>
+// using namespace std;
 
-    // cout<<"your love name is: "<<name<<endl;
+// int main(){
+//     string str = "I love coding";
+//     int count = 1;
+
+//     for(int i=0;i<str.size();i++){
+//         if(str[i]==' '){
+//             count++;
+//         }
+//     }
+
+//     cout<<count<<endl;
+//     return 0;
+
+
+// }
