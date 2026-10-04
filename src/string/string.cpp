@@ -254,34 +254,51 @@
 
 
 
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     string str = "I love programming";
+    
+//     int count = 0;
+//     int result = 0;
+    
+//     for(int i=0;i<str.size();i++){
+//         if(str[i]!=' '){
+//             count++;
+//         }else{
+//             if(count>result){
+//                 result += count;
+//             }
+//             count=0;
+//         }
+       
+//     }
+
+//     if(count>result){
+//         result = count;
+//     }
+//     cout<<result<<endl;
+
+    
+
+//     return 0;
+// }
+
+
+//append function
+
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(){
-    string str = "I love programming";
-    
-    int count = 0;
-    int result = 0;
-    
-    for(int i=0;i<str.size();i++){
-        if(str[i]!=' '){
-            count++;
-        }else{
-            if(count>result){
-                result += count;
-            }
-            count=0;
-        }
-       
-    }
+    string str1 = "Roshan",str2="himanshi";
 
-    if(count>result){
-        result = count;
-    }
-    cout<<result<<endl;
+    string str3 = str1.append(str2);
+    //other option
+    // str3 = str1+str2;
 
-    
-
-    return 0;
+    cout<<str3;
 }
