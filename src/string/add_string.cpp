@@ -1,48 +1,47 @@
+
 #include <iostream>
 #include <string>
 #include <algorithm>
 using namespace std;
 
-string add(string num1,string num2){
+string add(string num1, string num2) {
+    int sum, carry = 0;
     string ans;
-    int index1 = num1.size()-1,index2 = num2.size()-1;
-    int sum,carry=0;
+    int index1 = num1.size() - 1;
+    int index2 = num2.size() - 1;
 
-    //index2>=0
-    while(index2>=0){
+    while (index2 >= 0) {
         sum = (num1[index1]-'0')+(num2[index2]-'0')+carry;
-        carry = sum/10;
-        char c = '0'+sum%10;
-        ans+=c;
-        index2--,index1--;
+        carry = sum / 10;
+        char c = '0' + sum % 10;
+        ans += c;
+        index1--,index2--;
     }
-
-    //index1>=0
-     while(index1>=0){
+    while (index1 >= 0) {
         sum = (num1[index1]-'0')+carry;
-        carry = sum/10;
-        char c = '0'+sum%10;
-        ans+=c;
+        carry = sum / 10;
+        char c = '0' + sum % 10;
+        ans += c;
         index1--;
     }
-    if(carry){
-        ans+=char('0'+carry);
-
+    
+    if (carry) {
+        ans += '1';
     }
-
-    reverse(ans.begin(),ans.end());
+    reverse(ans.begin(), ans.end());
     return ans;
 }
-
-
-int main(){
-    string num1="2311",num2="77";
-
-    if(num1.size()<num2.size()){
-        swap(num2,num1);
+string addStrings(string num1, string num2) {
+    if (num1.size() < num2.size()) {
+        return add(num2, num1);
+    } else {
+        return add(num1, num2);
     }
-    cout<<add(num1,num2)<<endl;
-
-    return 0;
-    
 }
+int main() {
+    string num1 = "12345";
+    string num2 = "678";
+    cout << addStrings(num1, num2);
+    return 0;
+}
+
