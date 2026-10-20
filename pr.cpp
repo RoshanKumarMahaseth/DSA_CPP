@@ -718,24 +718,78 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include<algorithm>
+// using namespace std;
+
+// int main(){
+
+//     string s = "Geeksforgeeks";
+
+//     string str;
+//     for(int i=0;i<s.size();i++){
+//         if(i%2==0){
+//             str+=s[i];
+//         }
+//     }
+
+//     cout<<str<<endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+        
+//     vector<vector<int>> arr = {{1,2,3}, {4,5}};
+//     int sum=0;
+
+//     for(int i=0;i<arr.size();i++){
+//         for(int j=0;j<arr[i].size();j++){
+//             sum+=arr[i][j];
+//         }
+        
+//     }
+
+//     cout<<sum<<endl;
+//     return 0;
+// }
+
+
 #include <iostream>
-#include <string>
 #include <vector>
-#include<algorithm>
+#include <algorithm>
 using namespace std;
 
 int main(){
+    string s = "A man, a plan, a canal: Panama";
+    string clean = "";
 
-    string s = "Geeksforgeeks";
-
-    string str;
     for(int i=0;i<s.size();i++){
-        if(i%2==0){
-            str+=s[i];
+        if(isalnum(s[i])){
+            clean+=tolower(s[i]);
         }
     }
 
-    cout<<str<<endl;
+    int st=0,end=clean.size()-1;
+
+    while(st<=end){
+        if(clean[st]==clean[end]){
+            st++,end--;
+        }
+        else{
+            cout<<"not palindrome"<<endl;
+            return 0;
+        }
+    }
+    cout<<"its palindrome"<<endl;
+
+
+
     return 0;
 }
-
