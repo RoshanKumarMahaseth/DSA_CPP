@@ -761,35 +761,119 @@
 // }
 
 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+//     string s = "A man, a plan, a canal: Panama";
+//     string clean = "";
+
+//     for(int i=0;i<s.size();i++){
+//         if(isalnum(s[i])){
+//             clean+=tolower(s[i]);
+//         }
+//     }
+
+//     int st=0,end=clean.size()-1;
+
+//     while(st<=end){
+//         if(clean[st]==clean[end]){
+//             st++,end--;
+//         }
+//         else{
+//             cout<<"not palindrome"<<endl;
+//             return 0;
+//         }
+//     }
+//     cout<<"its palindrome"<<endl;
+
+
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <string>
+// using namespace std;
+
+// int main(){
+
+//     vector<int>freq(26,0);
+//     vector<int>freq1(26,0);
+
+//     string s = "anagram",t="nagaram";
+
+//     for(int i=0;i<s.size();i++){
+//         freq[s[i]-'a']++;
+//     }
+//     for(int i=0;i<t.size();i++){
+//         freq1[t[i]-'a']++;
+//     }
+
+//     for(int i=0;i<26;i++){
+//         if(freq[i]!=freq1[i]){
+//             cout<<-1<<endl;
+//             return -1;
+//         }
+//     }
+//     cout<<1<<endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main() {
+//     string haystack = "hello";
+//     string needle = "ll";
+
+//     for (int i = 0;i <=haystack.size()-needle.size();i++) {
+//         int j;
+//         for (j = 0; j < needle.size(); j++) {
+//             if (haystack[i + j] != needle[j]) {
+//                 break;
+//             }
+//         }
+//         if (j == needle.size()) {
+//             cout << i;
+//             return 0;
+//         }
+//     }
+//     cout << -1;
+//     return 0;
+// }
+
+
 #include <iostream>
 #include <vector>
+#include <string>
 #include <algorithm>
 using namespace std;
 
 int main(){
-    string s = "A man, a plan, a canal: Panama";
-    string clean = "";
 
-    for(int i=0;i<s.size();i++){
-        if(isalnum(s[i])){
-            clean+=tolower(s[i]);
+    vector<string>strs = {"flower","flow","flight"};
+    string s="";
+
+    for(int i=0;i<strs[0].size();i++){
+        for(int j=1;j<strs.size();j++){
+            if(i>=strs[j].size()){
+                cout<<s;
+                return 0;
+            }
+            if(strs[0][i]!=strs[j][i]){
+                cout<<s;
+                return 0;
+            }
         }
+        s+=strs[0][i];
     }
-
-    int st=0,end=clean.size()-1;
-
-    while(st<=end){
-        if(clean[st]==clean[end]){
-            st++,end--;
-        }
-        else{
-            cout<<"not palindrome"<<endl;
-            return 0;
-        }
-    }
-    cout<<"its palindrome"<<endl;
-
-
-
+    cout<<s;
     return 0;
 }
