@@ -35,7 +35,7 @@ int main(){
     int st=0,end=1,n=arr.size();
     if(k<0){
         k=k*-1;
-    }
+    } 
 
     while(end<n){
         if(arr[end]-arr[st]==k){
