@@ -5,7 +5,7 @@
 using namespace std;
 
 int main(){
-    string s="abcabcbb";
+    string s="pwwkew";
     vector<bool> count(256,0);
     int first=0,second=0,len=0;
 

@@ -850,30 +850,30 @@
 // }
 
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// #include <algorithm>
+// using namespace std;
 
-int main(){
+// int main(){
 
-    vector<string>strs = {"flower","flow","flight"};
-    string s="";
+//     vector<string>strs = {"flower","flow","flight"};
+//     string s="";
 
-    for(int i=0;i<strs[0].size();i++){
-        for(int j=1;j<strs.size();j++){
-            if(i>=strs[j].size()){
-                cout<<s;
-                return 0;
-            }
-            if(strs[0][i]!=strs[j][i]){
-                cout<<s;
-                return 0;
-            }
-        }
-        s+=strs[0][i];
-    }
-    cout<<s;
-    return 0;
-}
+//     for(int i=0;i<strs[0].size();i++){
+//         for(int j=1;j<strs.size();j++){
+//             if(i>=strs[j].size()){
+//                 cout<<s;
+//                 return 0;
+//             }
+//             if(strs[0][i]!=strs[j][i]){
+//                 cout<<s;
+//                 return 0;
+//             }
+//         }
+//         s+=strs[0][i];
+//     }
+//     cout<<s;
+//     return 0;
+// }
