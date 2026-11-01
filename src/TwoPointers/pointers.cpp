@@ -1,35 +1,16 @@
-// #include <iostream>
-// using namespace std;
-
-// int main(){
-//     int a = 567;
-//     cout<<&a<<endl;  //will show address in hexadecimal
-
-//     int *ptr = &a;
-//     cout<<ptr<<endl;
-//     cout<<sizeof(ptr)<<endl;
-
-//     float m = 2.6;
-//     float *ptr1 = &m;
-
-//     cout<<sizeof(ptr1)<<endl;
-// }
-
 #include <iostream>
 using namespace std;
 
 int main(){
     int a = 10;
-    //print the address of a
+    cout<<"printing a: "<<a<<endl;
+    cout<<"printing a address: "<<&a<<endl;
     int *ptr = &a;
-    cout<<ptr<<endl;
-    cout<<*ptr<<endl;
+    cout<<"printing a pointer: "<<ptr<<endl;
 
-    int b = 20;
-    ptr = &b;
-    cout<<ptr<<endl;
-    cout<<*ptr<<endl;
+    cout<<"printing ptr address: "<<&ptr<<endl;
 
-    b=30;
-    cout<<*ptr<<endl;
+    int ptr1 = a;
+    cout<<"printing ptr value: "<<&ptr1<<endl;
+
 }
