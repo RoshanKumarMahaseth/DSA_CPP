@@ -75,21 +75,30 @@ int main(){
 
     //print all the value
 
-    for(int i=0;i<5;i++){
-        cout<<ptr[i]<<" ";
-    }
+    // for(int i=0;i<5;i++){
+    //     cout<<ptr[i]<<" ";
+    // }
 
-    //print all the address
-    for(int i=0;i<5;i++){
-        cout<<ptr+i<<endl;
-    }
+    // //print all the address
+    // for(int i=0;i<5;i++){
+    //     cout<<ptr+i<<endl;
+    // }
 
-    //arithmetic operation ptr++,ptr--,ptr=ptr+1;
-    //print all the values
-    for(int i=0;i<8;i++){
-        cout<<*ptr<<" ";
-        ptr++;
-    }
+    // //arithmetic operation ptr++,ptr--,ptr=ptr+1;
+    // //print all the values
+    // for(int i=0;i<5;i++){
+    //     cout<<*ptr<<" ";
+    //     ptr++;
+    // }
+    // cout<<endl;
+
+    //addition 
+
+    ptr = ptr+3;
+    cout<<* ptr<<endl;
+
+    ptr = ptr-2;
+    cout<<*ptr<<endl;
 
 
 }
