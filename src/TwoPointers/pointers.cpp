@@ -58,19 +58,38 @@ int main(){
 
     //print the address of first element
 
-    cout<<arr<<endl;
-    cout<<arr+0<<endl;
-    cout<<&arr[0]<<endl;
-    cout<<ptr<<endl;
+    // cout<<arr<<endl;
+    // cout<<arr+0<<endl;
+    // cout<<&arr[0]<<endl;
+    // cout<<ptr<<endl;
     
 
-    //print the address of second element or 1 index
-    cout<<arr+1<<endl;
-    cout<<&arr[1]<<endl;
+    // //print the address of second element or 1 index
+    // cout<<arr+1<<endl;
+    // cout<<&arr[1]<<endl;
 
-    //print the value of 0th index
-    cout<<arr[0]<<endl;
-    cout<<arr[0]<<endl;
+    // //print the value of 0th index
+    // cout<<arr[0]<<endl;
+    // cout<<arr[0]<<endl;
+
+
+    //print all the value
+
+    for(int i=0;i<5;i++){
+        cout<<ptr[i]<<" ";
+    }
+
+    //print all the address
+    for(int i=0;i<5;i++){
+        cout<<ptr+i<<endl;
+    }
+
+    //arithmetic operation ptr++,ptr--,ptr=ptr+1;
+    //print all the values
+    for(int i=0;i<8;i++){
+        cout<<*ptr<<" ";
+        ptr++;
+    }
 
 
 }
